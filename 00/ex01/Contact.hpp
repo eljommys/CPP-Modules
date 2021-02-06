@@ -31,7 +31,7 @@ class Contact{
 	std::string secret;
 
 	public:
-		Contact(){
+		void init(){
 			std::cout << "name: ";
 			std::cin >> name;
 			std::cout << "surname: ";
@@ -55,7 +55,6 @@ class Contact{
 			std::cout << "secret: ";
 			std::cin >> secret;
 			};
-		~Contact(){}
 		void show_att(std::string att){
 
 			int len = (int)att.length();
