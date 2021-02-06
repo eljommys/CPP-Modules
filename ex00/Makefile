@@ -5,7 +5,7 @@ SRCS = megaphone.cpp
 all: $(NAME)
 
 $(NAME):
-	c++ -Wall -Wextra -Werror $(SRCS) -o $(NAME)
+	clang++ -Wall -Wextra -Werror $(SRCS) -o $(NAME)
 
 clean:
 	rm -rf $(NAME)
