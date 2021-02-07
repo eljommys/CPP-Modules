@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/06 17:00:59 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/06 17:00:59 by marvin           ###   ########.fr       */
+/*   Created: 2021/02/07 11:38:04 by marvin            #+#    #+#             */
+/*   Updated: 2021/02/07 11:38:04 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Pony.hpp"
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-int main(){
+# include <iostream>
+# include <string>
 
-	std::cout << "======CREATING OBJECTS=======" << std::endl;
-	Pony stack = ponyOnTheStack();
-	Pony *heap = ponyOnTheHeap();
-	std::cout << "======FINISHED OBJECTS=======" << std::endl;
+class Zombie{
 
-	std::cout << "======stack:" << std::endl;
-	stack.show();
+	public:
+		std::string type;
+		std::string name;
 
-	std::cout << "======heap:" << std::endl;
-	heap->show();
+		Zombie(){};
+		~Zombie(){};
 
-	std::cout << "free heap" << std::endl;
-	delete heap;
-	return 0;
-}
+		void announce(){
+			std::cout << "<" << name << " (" << type << ")> Braiiiiiiinnnssss..." << std::endl;
+		}
+};
+
+#endif

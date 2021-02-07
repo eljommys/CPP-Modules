@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/06 17:00:59 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/06 17:00:59 by marvin           ###   ########.fr       */
+/*   Created: 2021/02/07 12:22:11 by marvin            #+#    #+#             */
+/*   Updated: 2021/02/07 12:22:11 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Pony.hpp"
+#ifndef ZOMBIEEVENT_HPP
+# define ZOMBIEEVENT_HPP
 
-int main(){
+# include "Zombie.hpp"
 
-	std::cout << "======CREATING OBJECTS=======" << std::endl;
-	Pony stack = ponyOnTheStack();
-	Pony *heap = ponyOnTheHeap();
-	std::cout << "======FINISHED OBJECTS=======" << std::endl;
+class ZombieEvent{
 
-	std::cout << "======stack:" << std::endl;
-	stack.show();
+	std::string type;
 
-	std::cout << "======heap:" << std::endl;
-	heap->show();
+	public:
+		ZombieEvent(){};
+		~ZombieEvent(){};
 
-	std::cout << "free heap" << std::endl;
-	delete heap;
-	return 0;
-}
+		void setZombieType(std::string str){
+			type = str;
+		};
+
+		Zombie *newZombieType(std::string name){
+			Zombie *res = new Zombie();
+			res->name = name;
+			res->type = type;
+			return res;
+		}
+};
+
+#endif
