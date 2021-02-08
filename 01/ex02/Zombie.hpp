@@ -25,9 +25,9 @@ class Zombie{
 		Zombie(){};
 		~Zombie(){};
 
-		void announce(){
-			std::cout << "<" << name << " (" << type << ")> Braiiiiiiinnnssss..." << std::endl;
-		}
+		void announce();
 };
+
+Zombie *randomChump();
 
 #endif

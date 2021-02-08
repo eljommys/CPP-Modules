@@ -20,19 +20,8 @@ class ZombieEvent{
 	std::string type;
 
 	public:
-		ZombieEvent(){};
-		~ZombieEvent(){};
-
-		void setZombieType(std::string str){
-			type = str;
-		};
-
-		Zombie *newZombieType(std::string name){
-			Zombie *res = new Zombie();
-			res->name = name;
-			res->type = type;
-			return res;
-		}
+		void setZombieType(std::string str);
+		Zombie *newZombieType(std::string name);
 };
 
 #endif
