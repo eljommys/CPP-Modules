@@ -14,7 +14,6 @@
 
 std::string		Brain::identify(){
 
-
 	long address = (long)this;
 	std::stringstream add;
 

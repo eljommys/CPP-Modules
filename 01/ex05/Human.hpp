@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Human.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/08 20:34:13 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/08 20:34:13 by marvin           ###   ########.fr       */
+/*   Created: 2021/02/08 22:42:38 by marvin            #+#    #+#             */
+/*   Updated: 2021/02/08 22:42:38 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Brain.hpp"
-#include "Human.hpp"
+#ifndef HUMAN_HPP
+# define HUMAN_HPP
 
-int main()
-{
+# include "Brain.hpp"
 
-	Human bob;
-	std::cout << bob.identify() << std::endl;
-	std::cout << bob.mind.identify() << std::endl;
-	//std::cout << bob.getBrain().identify() << std::endl;
-}
+class Human{
+
+	const Brain mind;
+
+	public:
+		std::string identify();
+};
+
+#endif
