@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/07 12:28:36 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/07 12:28:36 by marvin           ###   ########.fr       */
+/*   Created: 2021/02/08 20:34:13 by marvin            #+#    #+#             */
+/*   Updated: 2021/02/08 20:34:13 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-#include <cstdlib>
+#include "Brain.hpp"
+//#include "Human.hpp"
 
-void Zombie::announce(){
-	std::cout << "<" << name << " (" << type << ")> Braiiiiiiinnnssss..." << std::endl;
-}
+int main()
+{
+	Brain brain;
 
-Zombie *randomChump(){
+	std::cout << brain.identify() << std::endl;
 
-    std::string names[5] = {"mike wazowsky", "woody allen", "al mcwighin", "jorge javier vazquez", "cristobal montoro"};
-    Zombie *zombie = new Zombie();
-
-    zombie->name = names[rand() % 5];
-    return zombie;
+	//Human bob;
+	//std::cout << bob.identify() << std::endl;
+	//std::cout << bob.getBrain().identify() << std::endl;
 }

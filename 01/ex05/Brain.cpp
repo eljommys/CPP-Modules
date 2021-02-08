@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/07 12:28:36 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/07 12:28:36 by marvin           ###   ########.fr       */
+/*   Created: 2021/02/08 20:16:00 by marvin            #+#    #+#             */
+/*   Updated: 2021/02/08 20:16:00 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-#include <cstdlib>
+#include "Brain.hpp"
 
-void Zombie::announce(){
-	std::cout << "<" << name << " (" << type << ")> Braiiiiiiinnnssss..." << std::endl;
-}
+std::string		Brain::identify(){
 
-Zombie *randomChump(){
 
-    std::string names[5] = {"mike wazowsky", "woody allen", "al mcwighin", "jorge javier vazquez", "cristobal montoro"};
-    Zombie *zombie = new Zombie();
+	long address = (long)this;
+	std::stringstream add;
 
-    zombie->name = names[rand() % 5];
-    return zombie;
+	add << "0x" << std::uppercase << std::hex << address;
+	return add.str();
 }
