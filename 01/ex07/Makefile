@@ -14,6 +14,6 @@ fclean: clean
 test:
 	./replace hola.txt tal jaime
 
-re: clean $(NAME)
+re: fclean $(NAME)
 
 .PHONY: clean fclean re

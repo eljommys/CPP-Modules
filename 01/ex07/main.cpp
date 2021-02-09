@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jserrano <jserrano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 17:48:02 by jserrano          #+#    #+#             */
-/*   Updated: 2021/02/09 19:08:40 by jserrano         ###   ########.fr       */
+/*   Updated: 2021/02/09 22:46:06 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int     main(int argc, char **argv){
         std::ifstream   file (argv[1]);
         if (!file)
             return 1;
-        
+
         std::stringstream fname;
         fname << argv[1] << ".replace";
 
@@ -32,11 +32,14 @@ int     main(int argc, char **argv){
 
         size_t pos;
         while (getline(file, content)){
-            while ((pos = content.find(s1)) && pos != std::string::npos){
-                //std::cout << content << std::endl;
+            while ((pos = content.find(s1)) != std::string::npos)
                 content.replace(pos, s1.length(), s2);
-            }
-            std::cout << content << std::endl;
+            res << content;
+            if (file.eof() == false)
+                res << std::endl;
         }
+        res.close();
+        return 0;
     }
+    return 1;
 }
