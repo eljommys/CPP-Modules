@@ -6,7 +6,7 @@
 /*   By: jserrano <jserrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 15:48:49 by jserrano          #+#    #+#             */
-/*   Updated: 2021/02/09 16:20:35 by jserrano         ###   ########.fr       */
+/*   Updated: 2021/02/09 17:25:57 by jserrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Weapon::Weapon(std::string type){
     this->type = type;
 }
 
-const std::string&  Weapon::getType(){
+const std::string&  Weapon::getType() const{
 
     return this->type;
 }

@@ -6,7 +6,7 @@
 /*   By: jserrano <jserrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 15:31:43 by jserrano          #+#    #+#             */
-/*   Updated: 2021/02/09 16:20:20 by jserrano         ###   ########.fr       */
+/*   Updated: 2021/02/09 17:25:51 by jserrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ class Weapon{
 
     public:
         Weapon(std::string type);
-        const std::string&  getType();
+        
+        const std::string&  getType() const;
         void                setType(std::string str);
 };
 
