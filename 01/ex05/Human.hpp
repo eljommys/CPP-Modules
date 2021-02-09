@@ -20,7 +20,9 @@ class Human{
 	const Brain mind;
 
 	public:
-		std::string identify();
+
+		std::string	identify();
+		const Brain		&getBrain();
 };
 
 #endif

@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jserrano <jserrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/08 17:27:50 by jserrano          #+#    #+#             */
-/*   Updated: 2021/02/09 14:48:55 by jserrano         ###   ########.fr       */
+/*   Created: 2021/02/09 15:48:49 by jserrano          #+#    #+#             */
+/*   Updated: 2021/02/09 16:20:35 by jserrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#include "Weapon.hpp"
 
-# include <iostream>
-# include <sstream>
+Weapon::Weapon(std::string type){
+    this->type = type;
+}
 
-class Brain{
-	int IQ;
+const std::string&  Weapon::getType(){
 
-	public:
-		Brain();
-		
-		std::string identify() const;
-};
+    return this->type;
+}
 
-#endif
+void                Weapon::setType(std::string str){
+
+    this->type = str;
+}

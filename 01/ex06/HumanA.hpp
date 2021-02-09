@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jserrano <jserrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/08 17:27:50 by jserrano          #+#    #+#             */
-/*   Updated: 2021/02/09 14:48:55 by jserrano         ###   ########.fr       */
+/*   Created: 2021/02/09 15:55:30 by jserrano          #+#    #+#             */
+/*   Updated: 2021/02/09 16:25:00 by jserrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
-# include <iostream>
-# include <sstream>
+# include "Weapon.hpp"
 
-class Brain{
-	int IQ;
+class   HumanA{
 
-	public:
-		Brain();
-		
-		std::string identify() const;
+    Weapon          _weapon;
+    std::string     name;
+
+    public:
+        HumanA(std::string name, Weapon weapon);
+        void            attack();
 };
 
 #endif

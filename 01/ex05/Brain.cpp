@@ -12,7 +12,11 @@
 
 #include "Brain.hpp"
 
-std::string		Brain::identify(){
+Brain::Brain(){
+	IQ = 130;
+}
+
+std::string		Brain::identify() const{
 
 	long address = (long)this;
 	std::stringstream add;

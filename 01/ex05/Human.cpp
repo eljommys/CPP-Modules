@@ -13,7 +13,11 @@
 #include "Human.hpp"
 
 std::string		Human::identify(){
-	Brain mind = this->mind;
 
 	return mind.identify();
+}
+
+const Brain	&Human::getBrain(){
+
+	return mind;
 }
