@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.class.hpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/10 13:24:04 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/10 13:24:04 by marvin           ###   ########.fr       */
+/*   Created: 2021/02/10 14:52:54 by marvin            #+#    #+#             */
+/*   Updated: 2021/02/10 14:52:54 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_CLASS_HPP
-# define FIXED_CLASS_HPP
+#include "Fixed.class.hpp"
 
-#include <iostream>
+int main(void){
 
-class	Fixed{
+	Fixed a;
+	Fixed b(a);
+	Fixed c;
 
-	private:
-		int					val;
-		static const int	frac = 8;
+	c = b;
 
-	public:
-		Fixed();
-		~Fixed();
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
 
-		Fixed(const Fixed& obj);
-		void	operator = (const Fixed& obj);
-
-		int		getRawBits( void ) const;
-		void	setRawBits( int const raw );
-};
-
-#endif
+	return 0;
+}
