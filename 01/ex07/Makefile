@@ -12,7 +12,7 @@ fclean: clean
 	rm -rf $(NAME)
 
 test:
-	./replace hola.txt tal jaime
+	./replace hola.txt tal taltal
 
 re: fclean $(NAME)
 
