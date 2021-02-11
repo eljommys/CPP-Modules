@@ -6,7 +6,7 @@
 /*   By: jserrano <jserrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 17:48:02 by jserrano          #+#    #+#             */
-/*   Updated: 2021/02/11 13:02:06 by jserrano         ###   ########.fr       */
+/*   Updated: 2021/02/11 13:03:14 by jserrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,34 @@ int     main(int argc, char **argv){
         std::ifstream   file (argv[1]);
         if (!file)
             return 1;
-        
+
         std::stringstream fname;
         fname << argv[1] << ".replace";
 
         std::string     content;
+        std::string     aux;
         std::ofstream   res (fname.str());
         std::string     s1 = argv[2];
         std::string     s2 = argv[3];
 
-        size_t pos;
+        int pos[2];
         while (getline(file, content)){
-            while ((pos = content.find(s1)) && pos != std::string::npos){
-                //std::cout << content << std::endl;
-                content.replace(pos, s1.length(), s2);
+
+            aux = content;
+            pos[1] = -1;
+
+            while ((pos[0] = content.find(s1)) != (int)std::string::npos && pos[0] != pos[1]){
+
+                aux.replace(pos[0], s1.length(), s2);
+                pos[1] = pos[0];
             }
-            std::cout << content << std::endl;
+
+            res << aux;
+            if (file.eof() == false)
+                res << std::endl;
         }
+        res.close();
+        return 0;
     }
+    return 1;
 }
