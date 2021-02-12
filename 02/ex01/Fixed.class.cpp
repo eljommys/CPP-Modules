@@ -37,7 +37,7 @@ Fixed::Fixed(const int n){
 Fixed::Fixed(const float n){
 
 	std::cout << "Float constructor called" << std::endl;
-	val = n * (float)(1 << frac);
+	val = roundf(n * (float)(1 << frac));
 }
 
 
