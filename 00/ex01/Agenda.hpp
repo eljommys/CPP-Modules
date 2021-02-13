@@ -17,9 +17,10 @@
 
 class Agenda{
 
-	public:
 		Contact		contacts[8];
 		int			size = 0;
+
+	public:
 
 		void add(){
 			if (size < 8){

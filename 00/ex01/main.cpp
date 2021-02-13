@@ -20,7 +20,7 @@ int main(){
 	while (1){
 		std::cout << "Please type one of the following commands: ADD, SEARCH or EXIT" << std::endl;
 		std::cin >> command;
-		if (command == "ADD" && my_agenda.size < 8)
+		if (command == "ADD")
 			my_agenda.add();
 		else if (command == "SEARCH")
 			my_agenda.search();
