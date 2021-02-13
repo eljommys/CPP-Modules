@@ -44,7 +44,7 @@ Fixed::Fixed(const float n){
 void	Fixed::operator = (const Fixed& obj){
 
 	std::cout << "Assignation operator called" << std::endl;
-	val = obj.val;
+	this->val = obj.val;
 }
 
 int		Fixed::getRawBits( void ) const{
