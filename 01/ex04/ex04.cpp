@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ex04.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jserrano <jserrano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 16:27:18 by jserrano          #+#    #+#             */
-/*   Updated: 2021/02/08 16:48:23 by jserrano         ###   ########.fr       */
+/*   Updated: 2021/02/14 16:20:17 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,11 @@ int main(){
 
     std::string str = "HI THIS IS BRAIN";
     std::string *ptr = &str;
-    std::string& phr = str;
+    std::string& ref = str;
 
-    printf("%s\n", str.c_str());
+    std::cout << *ptr << std::endl;
+    std::cout << ref << std::endl;
+
+    std::cout << ptr << std::endl;
+    std::cout << &ref << std::endl;
 }
