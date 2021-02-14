@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Sorcerer.hpp                                       :+:      :+:    :+:   */
+/*   Peon.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/14 17:00:49 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/14 17:00:49 by marvin           ###   ########.fr       */
+/*   Created: 2021/02/14 19:49:39 by marvin            #+#    #+#             */
+/*   Updated: 2021/02/14 19:49:39 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SORCERER_HPP
-# define SORCERER_HPP
+#ifndef PEON_HPP
+# define PEON_HPP
 
-#include <iostream>
 #include "Victim.hpp"
 
-class	Sorcerer{
-
-	private:
-		std::string name;
-		std::string title;
+class	Peon: public Victim{
 
 	public:
-		Sorcerer(std::string name, std::string title);
-		~Sorcerer();
+		Peon(std::string name);
+		~Peon();
 
-		std::string		getName() const;
-		std::string		getTitle() const;
-		void			polymorph(Victim const &obj) const;
+		void	getPolymorphed() const;
 };
-
-std::ostream	&operator<<(std::ostream &out, const Sorcerer& obj);
 
 #endif

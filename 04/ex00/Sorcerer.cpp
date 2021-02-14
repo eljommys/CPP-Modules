@@ -21,11 +21,26 @@ Sorcerer::Sorcerer(std::string name, std::string title){
 
 Sorcerer::~Sorcerer(){
 
-	std::cout << "I am " << name << ", " << title << ", and I like ponies!" << std::endl;
+	std::cout << name << ", " << title << ", is dead. Consequences will never be the same!" << std::endl;
 }
 
+std::string		Sorcerer::getName() const{
 
-void	Sorcerer::introduce(){
+	return this->name;
+}
 
-	std::cout << "I am " << name << ", " << title << ", and I like ponies!" << std::endl;
+std::string		Sorcerer::getTitle() const{
+
+	return this->title;
+}
+
+void			Sorcerer::polymorph(const Victim& obj) const{
+
+	obj.getPolymorphed();
+}
+
+std::ostream	&operator<<(std::ostream &out, const Sorcerer& obj){
+
+	out << "I am " << obj.getName() << ", " << obj.getTitle() << ", and I like ponies!" << std::endl;
+	return out;
 }

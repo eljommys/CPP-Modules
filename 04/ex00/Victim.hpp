@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Sorcerer.hpp                                       :+:      :+:    :+:   */
+/*   Victim.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/14 17:00:49 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/14 17:00:49 by marvin           ###   ########.fr       */
+/*   Created: 2021/02/14 19:01:11 by marvin            #+#    #+#             */
+/*   Updated: 2021/02/14 19:01:11 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SORCERER_HPP
-# define SORCERER_HPP
+#ifndef VICTIM_HPP
+# define VICTIM_HPP
 
 #include <iostream>
-#include "Victim.hpp"
 
-class	Sorcerer{
+class	Victim{
 
-	private:
+	protected:
 		std::string name;
-		std::string title;
 
 	public:
-		Sorcerer(std::string name, std::string title);
-		~Sorcerer();
+		Victim(std::string name);
+		~Victim();
 
-		std::string		getName() const;
-		std::string		getTitle() const;
-		void			polymorph(Victim const &obj) const;
+		std::string	getName() const;
+		void	getPolymorphed() const;
 };
 
-std::ostream	&operator<<(std::ostream &out, const Sorcerer& obj);
+std::ostream	&operator<<(std::ostream &out, const Victim& obj);
 
 #endif
