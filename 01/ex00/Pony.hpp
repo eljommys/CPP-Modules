@@ -19,32 +19,16 @@ class	Pony{
 
 	int legs;
 	int health;
+	std::string name;
 
 	public:
 
-		void init(){
-			legs = 4;
-			health = 100;
-		}
+		Pony(std::string const name);
+		~Pony();
 
-		Pony(){
-			init();
-		}
-		~Pony(){};
-
-		void jump(){
-			if (legs < 4)
-				health -= 20;
-		}
-
-		void run(){
-			legs--;
-		}
-
-		void show(){
-			std::cout << "legs: " << legs << std::endl;
-			std::cout << "health: " << health << std::endl;
-		}
+		void jump();
+		void run();
+		void show();
 };
 
 Pony	*ponyOnTheHeap();

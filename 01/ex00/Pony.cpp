@@ -12,8 +12,40 @@
 
 #include "Pony.hpp"
 
+Pony::Pony(std::string const name){
+
+	legs = 4;
+	health = 100;
+	this->name = name;
+}
+
+Pony::~Pony(){
+
+	std::cout << "KILLING " << this->name << std::endl;
+};
+
+
+void Pony::jump(){
+
+	if (legs < 4)
+		health -= 20;
+}
+
+void Pony::run(){
+
+	legs--;
+}
+
+void Pony::show(){
+
+	std::cout << "legs: " << legs << std::endl;
+	std::cout << "health: " << health << std::endl;
+}
+
+
 Pony	*ponyOnTheHeap(){
-	Pony *pony = new Pony();
+
+	Pony *pony = new Pony("Heapy");
 
 	pony->show();
 
@@ -36,10 +68,9 @@ Pony	*ponyOnTheHeap(){
 }
 
 Pony	ponyOnTheStack(){
-	Pony pony;
+	Pony pony("Stacky");
 
 	std::cout << "INIT PONY ON THE STACK" << std::endl;
-	pony.init();
 
 	pony.show();
 

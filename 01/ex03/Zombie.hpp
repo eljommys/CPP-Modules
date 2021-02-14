@@ -20,8 +20,8 @@
 class Zombie{
 
 	public:
-		std::string type;
 		std::string name;
+		std::string type;
 
 		Zombie(){};
 		~Zombie(){};

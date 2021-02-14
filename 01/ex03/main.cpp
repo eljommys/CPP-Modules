@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jserrano <jserrano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 14:05:09 by jserrano          #+#    #+#             */
-/*   Updated: 2021/02/08 15:53:01 by jserrano         ###   ########.fr       */
+/*   Updated: 2021/02/14 13:05:35 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int main(){
 
-    ZombieHorde *horda = new ZombieHorde(6);
+    ZombieHorde horda(6);
 
-    horda->announce();
-    delete horda;
+    horda.announce();
+    return 0;
 }

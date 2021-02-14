@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jserrano <jserrano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 13:12:09 by jserrano          #+#    #+#             */
-/*   Updated: 2021/02/08 13:34:32 by jserrano         ###   ########.fr       */
+/*   Updated: 2021/02/14 12:01:34 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,16 @@
 #include "ZombieEvent.hpp"
 
 int main(){
-    ZombieEvent *maker = new ZombieEvent();
+    ZombieEvent maker;
     Zombie *zombie;
-    Zombie *random;
+    Zombie random;
 
-    maker->setZombieType("lento");
-    zombie =  maker->newZombieType("usain bolt");
+    maker.setZombieType("lento");
+    zombie =  maker.newZombieType("usain bolt");
     random = randomChump();
 
     zombie->announce();
-    random->announce();
 
-    delete maker;
     delete zombie;
-    delete random;
 }
 

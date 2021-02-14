@@ -17,11 +17,12 @@ void Zombie::announce(){
 	std::cout << "<" << name << " (" << type << ")> Braiiiiiiinnnssss..." << std::endl;
 }
 
-Zombie *randomChump(){
+Zombie randomChump(){
 
     std::string names[5] = {"mike wazowsky", "woody allen", "al mcwighin", "jorge javier vazquez", "cristobal montoro"};
-    Zombie *zombie = new Zombie();
+    Zombie zombie;
 
-    zombie->name = names[rand() % 5];
+    zombie.name = names[rand() % 5];
+    zombie.announce();
     return zombie;
 }

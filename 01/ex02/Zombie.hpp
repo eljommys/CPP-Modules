@@ -28,6 +28,6 @@ class Zombie{
 		void announce();
 };
 
-Zombie *randomChump();
+Zombie randomChump();
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jserrano <jserrano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 13:43:38 by jserrano          #+#    #+#             */
-/*   Updated: 2021/02/08 15:52:31 by jserrano         ###   ########.fr       */
+/*   Updated: 2021/02/14 13:25:13 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,17 @@ ZombieHorde::ZombieHorde(int N){
         this->horde = new Zombie[N];
         std::string names[5] = {"mike wazowsky", "woody allen", "al mcwighin", "jorge javier vazquez", "cristobal montoro"};
 
-        while (N-- > 0)
-            horde[N].name = names[rand() % 5];
+        for(int i = 0; i < N; i++)
+            horde[i].name = names[rand() % 5];
     }
 }
+
+ZombieHorde::~ZombieHorde(){
+
+    if (size > 0)
+        delete[] this->horde;
+}
+
 
 void       ZombieHorde::announce(){
 
