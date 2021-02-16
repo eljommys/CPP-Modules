@@ -12,7 +12,15 @@
 
 #include "Squad.hpp"
 
-Squad::Squad(): size(0), squad(nullptr){}
+Squad::Squad(): squad(nullptr), size(0){}
+
+Squad::~Squad(){
+
+	for (int i = 0; i < this->size; i++)
+		delete this->squad[i];
+	delete[] this->squad;
+}
+
 
 int				Squad::getCount() const{
 

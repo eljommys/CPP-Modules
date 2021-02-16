@@ -13,6 +13,8 @@
 #ifndef ISPACEMARINE_HPP
 # define ISPACEMARINE_HPP
 
+# include <iostream>
+
 class	ISpaceMarine{
 
 	public:

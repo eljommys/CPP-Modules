@@ -18,10 +18,12 @@
 class	TacticalMarine: public ISpaceMarine{
 
 	public:
-		ISpaceMarine* 	clone();
-		void			battleCry();
-		void			rangedAttack();
-		void			meleeAttack();
+		TacticalMarine();
+		~TacticalMarine();
+		ISpaceMarine* 	clone() const;
+		void			battleCry() const;
+		void			rangedAttack() const;
+		void			meleeAttack() const;
 };
 
 #endif
