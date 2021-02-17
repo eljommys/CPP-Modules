@@ -6,7 +6,7 @@
 /*   By: jserrano <jserrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 15:52:01 by jserrano          #+#    #+#             */
-/*   Updated: 2021/02/16 17:48:09 by jserrano         ###   ########.fr       */
+/*   Updated: 2021/02/17 14:19:56 by jserrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ class   Character: public ICharacter{
 
     public:
         Character(std::string name);
-        Character();
-        virtual ~Character();
 
         Character &operator=(Character const &other);
 

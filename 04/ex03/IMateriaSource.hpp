@@ -6,7 +6,7 @@
 /*   By: jserrano <jserrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 18:02:28 by jserrano          #+#    #+#             */
-/*   Updated: 2021/02/16 19:04:38 by jserrano         ###   ########.fr       */
+/*   Updated: 2021/02/17 14:09:07 by jserrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class IMateriaSource{
     
     public:
         virtual ~IMateriaSource() {}
-        virtual void learnMateria(AMateria*) = 0;
+        virtual void learnMateria(AMateria* m) = 0;
         virtual AMateria* createMateria(std::string const & type) = 0;
 };
 

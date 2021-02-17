@@ -6,7 +6,7 @@
 /*   By: jserrano <jserrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 14:39:40 by jserrano          #+#    #+#             */
-/*   Updated: 2021/02/16 17:55:48 by jserrano         ###   ########.fr       */
+/*   Updated: 2021/02/17 14:31:57 by jserrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define AMATERIA_HPP
 
 # include <iostream>
+class AMateria;
 # include "ICharacter.hpp"
 
 class AMateria{
