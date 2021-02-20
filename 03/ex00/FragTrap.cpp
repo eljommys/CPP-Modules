@@ -35,7 +35,7 @@ FragTrap::~FragTrap(){
 int		FragTrap::vaulthunter_dot_exe(std::string const & target){
 
 	std::string answer;
-	std::string quotes[5] = {"HELLO BOYS I'M BAAACK!!!", "YIPEE KI YAY MOTHERFUCKER!",
+	std::string quotes[5] = {"HELLO BOYS I'M BAAACK!!!", "YIPEE KI YAY MOTHER***!",
 		"HASTA LA VISTA BABY.", "KNOCK KNOCK", "SAY HELLO TO MA' LIL' FREND"};
 
 	std::cout << "Wanna say a random attack phrase to " << target << "?. This costs 25 of energy. Type YES or NO:";
