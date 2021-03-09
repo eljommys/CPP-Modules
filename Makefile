@@ -1,4 +1,4 @@
-MSG = default commi message
+MSG = default commit message
 
 all:
 	git add .
