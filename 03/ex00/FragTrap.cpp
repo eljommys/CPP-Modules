@@ -24,6 +24,7 @@ FragTrap::FragTrap(std::string name){
 	this->melee_attack_damage = 30;
 	this->ranged_attack_damage = 20;
 	this->armor_damage_reduction = 5;
+	srand((int)time(0));
 	std::cout << "READY FOR DOOM" << std::endl << std::endl;
 }
 

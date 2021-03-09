@@ -1,4 +1,6 @@
+MSG = default message
+
 all:
 	git add .
-	git commit -m "make"
+	git commit -m "$(MSG)"
 	git push
