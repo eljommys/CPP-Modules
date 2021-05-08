@@ -29,7 +29,7 @@ FragTrap::FragTrap(std::string name){
 }
 
 FragTrap::~FragTrap(){
-
+	std::cout << "Turning robot off" << std::endl;
 }
 
 
@@ -121,4 +121,18 @@ void	FragTrap::show(){
 	std::cout << "melee_attack_damage = " << melee_attack_damage << std::endl;
 	std::cout << "ranged_attack_damage = " << ranged_attack_damage << std::endl;
 	std::cout << "armor_damage_reduction = " << armor_damage_reduction << std::endl;
+}
+
+FragTrap	&FragTrap::operator=(FragTrap const &rhs) {
+	std::cout << "Copying " << rhs.name << "'s data into " << name << std::endl;
+	name = rhs.name;
+	hit_points = rhs.hit_points;
+	max_hit_points = rhs.max_hit_points;
+	energy_points = rhs.energy_points;
+	max_energy_points = rhs.max_energy_points;
+	level = rhs.level;
+	melee_attack_damage = rhs.melee_attack_damage;
+	ranged_attack_damage = rhs.ranged_attack_damage;
+	armor_damage_reduction = rhs.armor_damage_reduction;
+	return (*this);
 }

@@ -40,6 +40,8 @@ class FragTrap
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
 		void	show();
+
+		FragTrap	&operator=(FragTrap const &rhs);
 };
 
 #endif
