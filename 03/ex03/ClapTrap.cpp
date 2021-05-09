@@ -1,46 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/12 14:53:13 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/12 14:53:13 by marvin           ###   ########.fr       */
+/*   Created: 2021/05/08 18:55:24 by marvin            #+#    #+#             */
+/*   Updated: 2021/05/08 18:55:24 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name){
+ClapTrap::ClapTrap(){
 
-	std::cout << "=====SETTING UP SC4V-TP. Hyperion® all rights reserved=====" << std::endl;
-	this->hit_points = 100;
-	this->max_hit_points = 100;
-	this->energy_points = 50;
-	this->max_energy_points = 50;
+	std::cout << "Default Clap Trap Constructor" << std::endl;
+	this->hit_points = 0;
+	this->max_hit_points = 0;
+	this->energy_points = 0;
+	this->max_energy_points = 0;
 	this->level = 1;
-	this->name = name;
-	this->melee_attack_damage = 20;
-	this->ranged_attack_damage = 15;
-	this->armor_damage_reduction = 3;
-	std::cout << "READY FOR DOOM" << std::endl << std::endl;
+	this->name = "Default";
+	this->melee_attack_damage = 0;
+	this->ranged_attack_damage = 0;
+	this->armor_damage_reduction = 0;
+	srand((int)time(0));
+	std::cout << "DONE" << std::endl << std::endl;
 }
 
-ScavTrap::~ScavTrap(){
-	std::cout << "Scav Trap was erradicated" << std::endl;
+ClapTrap::~ClapTrap(){
+	std::cout << "Deleting Clap Trap" << std::endl;
 }
 
-
-void	ScavTrap::challengeNewcomer(){
-
-	std::string quotes[5] = {"5 PUSH UPS", "NOW A BACKFLIP",
-		"LICK THAT DOG SHIT", "GIVE ME 50 BUCKS", "SAY HELLO TO MA' LIL' FREND. No really, say it!"};
-
-	std::cout << "The challenge you have to do is..." << std::endl << quotes[rand() % 5] << std::endl;
-}
-
-void	ScavTrap::rangedAttack(std::string const & target){
+void	ClapTrap::rangedAttack(std::string const & target){
 
 	if (!this->energy_points){
 		std::cout << "Do U really think " << this->name << "'s gonna shoot somethin'?" << std::endl;
@@ -50,13 +42,13 @@ void	ScavTrap::rangedAttack(std::string const & target){
 
 	int damage = rand() % ((this->hit_points + 1) * this->energy_points / 100);
 
-	std::cout << "SC4V-TP " << this->name << " shoots " << target <<
+	std::cout << "FR4G-TP " << this->name << " shoots " << target <<
 	" at range, causing " << damage << " points of damage!" << std::endl;
 }
 
-void	ScavTrap::meleeAttack(std::string const & target){
+void	ClapTrap::meleeAttack(std::string const & target){
 
-	std::cout << "SC4V-TP " << this->name << " hits " << target;
+	std::cout << "FR4G-TP " << this->name << " hits " << target;
 
 	if (!this->energy_points){
 		std::cout << "Do U really think " << this->name << "'s gonna hit somethin'?" << std::endl;
@@ -71,7 +63,7 @@ void	ScavTrap::meleeAttack(std::string const & target){
 	std::cout << "Don't do this unless is absolutely necessary. This is damaging for " << this->name << std::endl;
 }
 
-void	ScavTrap::takeDamage(unsigned int amount){
+void	ClapTrap::takeDamage(unsigned int amount){
 
 	if (!this->energy_points){
 		std::cout << "You stoopid or what!? Don't shoot dead bodies!" << std::endl;
@@ -84,7 +76,7 @@ void	ScavTrap::takeDamage(unsigned int amount){
 		std::cout << "Such a shame. Only one day for his retiring" << std::endl;
 }
 
-void	ScavTrap::beRepaired(unsigned int amount){
+void	ClapTrap::beRepaired(unsigned int amount){
 
 	if (this->energy_points == this->max_energy_points){
 		std::cout << "Why do you want to repair it. He's like brand new" << std::endl;
@@ -96,7 +88,7 @@ void	ScavTrap::beRepaired(unsigned int amount){
 		std::cout << "Ok, now " << this->name << " is in perfect conditions" << std::endl;
 }
 
-void	ScavTrap::show(){
+void	ClapTrap::show(){
 	std::cout << "hit points = " << hit_points << std::endl;
 	std::cout << "max_hit_points = " << max_hit_points << std::endl;
 	std::cout << "energy_points = " << energy_points << std::endl;
@@ -106,4 +98,9 @@ void	ScavTrap::show(){
 	std::cout << "melee_attack_damage = " << melee_attack_damage << std::endl;
 	std::cout << "ranged_attack_damage = " << ranged_attack_damage << std::endl;
 	std::cout << "armor_damage_reduction = " << armor_damage_reduction << std::endl;
+}
+
+std::string ClapTrap::getName() const
+{
+	return this->name;
 }

@@ -29,8 +29,9 @@ FragTrap::FragTrap(std::string name){
 }
 
 FragTrap::~FragTrap(){
-	std::cout << "Deleting Frag Trap" << std::endl;
+	std::cout << "Frag Trap was erradicated" << std::endl;
 }
+
 
 int		FragTrap::vaulthunter_dot_exe(std::string const & target){
 
