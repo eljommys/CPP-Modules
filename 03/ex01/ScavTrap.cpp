@@ -24,6 +24,7 @@ ScavTrap::ScavTrap(std::string name){
 	this->melee_attack_damage = 20;
 	this->ranged_attack_damage = 15;
 	this->armor_damage_reduction = 3;
+	srand((int)time(0));
 	std::cout << "READY FOR DOOM" << std::endl << std::endl;
 }
 
@@ -36,7 +37,6 @@ void	ScavTrap::challengeNewcomer(){
 
 	std::string quotes[5] = {"5 PUSH UPS", "NOW A BACKFLIP",
 		"LICK THAT DOG SHIT", "GIVE ME 50 BUCKS", "SAY HELLO TO MA' LIL' FREND. No really, say it!"};
-
 	std::cout << "The challenge you have to do is..." << std::endl << quotes[rand() % 5] << std::endl;
 }
 

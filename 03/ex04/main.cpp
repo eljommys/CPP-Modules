@@ -44,6 +44,4 @@ int		main(){
 	super.show();
 	super.meleeAttack("Thuma D.R.E");
 	super.meleeAttack("Mima D.R.E");
-
-
 }

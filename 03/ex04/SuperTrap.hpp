@@ -21,9 +21,6 @@ class	SuperTrap: public FragTrap, public NinjaTrap
 	public:
 		SuperTrap(std::string name);
 		~SuperTrap();
-
-		//FragTrap::rangedAttack(name)}
-		//void meleeAttack(std::string name){NinjaTrap::meleeAttack(name)}
 };
 
 #endif

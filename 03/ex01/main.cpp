@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int		main(){
 
@@ -27,6 +28,7 @@ int		main(){
 	bot2.meleeAttack("MY SON");
 	bot2.takeDamage(50);
 	bot2.beRepaired(10);
-	bot2.challengeNewcomer();
+	for (int i = 0; i < 3; i++)
+		bot2.challengeNewcomer();
 	bot2.show();
 }
