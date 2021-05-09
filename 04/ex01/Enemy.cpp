@@ -33,4 +33,5 @@ int					Enemy::getHP() const{
 void				Enemy::takeDamage(int damage){
 
 	this->hp -= (damage < 0 || !hp) ? 0 : damage;
+	this->hp = (hp < 0) ? 0 : hp;
 }

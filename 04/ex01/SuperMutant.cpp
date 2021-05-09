@@ -14,7 +14,7 @@
 
 SuperMutant::SuperMutant(): Enemy(170, "Super Mutant"){
 
-	std::cout << "Gaaah. Me want smash heads!" << std::endl;
+	std::cout << "Gaaah. Break everything!" << std::endl;
 }
 
 SuperMutant::~SuperMutant(){

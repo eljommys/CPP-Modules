@@ -13,12 +13,12 @@
 #include "TacticalMarine.hpp"
 
 TacticalMarine::TacticalMarine(){
-	
-	std::cout << "Tactical marine ready for battle!" << std::endl;
+
+	std::cout << "Tactical marine ready for action!" << std::endl;
 }
 
 TacticalMarine::~TacticalMarine(){
-	
+
 	std::cout << "Aaaargh..." << std::endl;
 }
 

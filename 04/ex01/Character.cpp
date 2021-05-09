@@ -37,7 +37,7 @@ void	Character::attack(Enemy *enemy){
 	if (this->weapon == NULL)
 		return ;
 
-	std::cout << this->name << " attacks " << enemy->getType() << " with a " << this->weapon->getName() << std::endl;
+	std::cout << this->name << " hasttaque " << enemy->getType() << " with a " << this->weapon->getName() << std::endl;
 	this->weapon->attack();
 
 	enemy->takeDamage(this->weapon->getDamage());
@@ -70,9 +70,9 @@ bool			Character::isArmed(){
 
 std::ostream	&operator<<(std::ostream &out, Character &obj){
 
-	out << obj.getName() << " has " << obj.getAP();
+	out << obj.getName() << " has " << obj.getAP() << " AP";
 	if (obj.isArmed())
-		out << " and wields a " << obj.getWeapon();
+		out << " and carries a " << obj.getWeapon();
 	else
 		out << " and is unarmed";
 	out << std::endl;
