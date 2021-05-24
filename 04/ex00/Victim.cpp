@@ -33,6 +33,12 @@ void			Victim::getPolymorphed() const{
 	std::cout << name << " has been turned into a cute little sheep!" << std::endl;
 }
 
+Victim			&Victim::operator=(const Victim &obj){
+
+	this->name = obj.name;
+
+	return *this;
+}
 
 std::ostream	&operator<<(std::ostream &out, const Victim& obj){
 

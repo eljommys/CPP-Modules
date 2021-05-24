@@ -40,6 +40,8 @@ class	Character{
 		int			const &getAP() const;
 		std::string const &getWeapon() const;
 		bool			isArmed();
+
+		Character		&operator=(const Character &obj);
 };
 
 std::ostream	&operator<<(std::ostream &out, Character &obj);

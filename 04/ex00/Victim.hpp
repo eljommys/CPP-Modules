@@ -22,10 +22,12 @@ class	Victim{
 
 	public:
 		Victim(std::string name);
-		~Victim();
+		virtual ~Victim();
 
 		std::string	getName() const;
 		void	getPolymorphed() const;
+
+		Victim &operator=(const Victim &obj);
 };
 
 std::ostream	&operator<<(std::ostream &out, const Victim& obj);

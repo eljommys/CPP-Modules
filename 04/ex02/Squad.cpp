@@ -38,10 +38,8 @@ int				Squad::push(ISpaceMarine* obj){
 
 	if (obj == nullptr)
 		return this->size;
-	for (int i = 0; i < this->size; i++){
-		if (obj == this->squad[i])
-			return this->size;
-	}
+	for (int i = 0; i < this->size; i++) if (obj == this->squad[i])
+		return this->size;
 
 	this->size++;
 	ISpaceMarine** aux = new ISpaceMarine*[this->size];
@@ -55,4 +53,12 @@ int				Squad::push(ISpaceMarine* obj){
 
 	this->squad = aux;
 	return this->size;
+}
+
+Squad		&Squad::operator=(const Squad &obj){
+
+	this->size = obj.size;
+	this->squad = obj.squad;
+
+	return *this;
 }

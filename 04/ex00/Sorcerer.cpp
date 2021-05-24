@@ -39,6 +39,14 @@ void			Sorcerer::polymorph(const Victim& obj) const{
 	obj.getPolymorphed();
 }
 
+Sorcerer		&Sorcerer::operator=(const Sorcerer &obj){
+
+	this->name = obj.name;
+	this->title = obj.title;
+
+	return *this;
+}
+
 std::ostream	&operator<<(std::ostream &out, const Sorcerer& obj){
 
 	out << "I am " << obj.getName() << ", " << obj.getTitle() << ", and I like ponies!" << std::endl;

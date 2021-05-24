@@ -30,6 +30,9 @@ class AWeapon
 		int						getAPCost() const;
 		int						getDamage() const;
 		virtual void			attack() const = 0;
+
+		AWeapon					&operator=(const AWeapon &obj);
 };
+
 
 #endif

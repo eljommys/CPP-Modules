@@ -29,6 +29,8 @@ class Enemy{
 		int getHP() const;
 
 		virtual void takeDamage(int damage);
+
+		Enemy		&operator=(const Enemy &obj);
 };
 
 #endif

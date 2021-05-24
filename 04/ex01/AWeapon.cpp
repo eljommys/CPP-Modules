@@ -36,3 +36,12 @@ int						AWeapon::getDamage() const{
 	return this->damage;
 }
 
+
+AWeapon					&AWeapon::operator=(const AWeapon &obj){
+
+	this->name = obj.name;
+	this->damage = obj.damage;
+	this->ap = obj.ap;
+
+	return *this;
+}

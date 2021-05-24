@@ -17,11 +17,16 @@
 int main()
 {
 	Sorcerer robert("Robert", "the Magnificent");
+	Sorcerer merlin("Merlin", "the Magufo");
 
 	Victim jim("Jimmy");
 	Peon joe("Joe");
 
-	std::cout << robert << jim << joe;
+	std::cout << robert << merlin << jim << joe;
+	jim = joe;
+	robert = merlin;
+	std::cout << robert << merlin << jim << joe;
+
 
 	robert.polymorph(jim);
 	robert.polymorph(joe);

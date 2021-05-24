@@ -28,6 +28,8 @@ class	Squad: public ISquad{
 		int				getCount() const;
 		ISpaceMarine*	getUnit(int i) const;
 		int				push(ISpaceMarine* obj);
+
+		Squad			&operator=(const Squad &obj);
 };
 
 #endif

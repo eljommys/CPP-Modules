@@ -34,7 +34,7 @@ void	Character::equip(AWeapon *weapon){
 
 void	Character::attack(Enemy *enemy){
 
-	if (this->weapon == NULL)
+	if (this->weapon == NULL || !this->ap)
 		return ;
 
 	std::cout << this->name << " hasttaque " << enemy->getType() << " with a " << this->weapon->getName() << std::endl;
@@ -66,6 +66,15 @@ bool			Character::isArmed(){
 	if (this->weapon == NULL)
 		return false;
 	return true;
+}
+
+Character		&Character::operator=(const Character &obj){
+
+	this->name = obj.name;
+	this->ap = obj.ap;
+	this->weapon = obj.weapon;
+
+	return *this;
 }
 
 std::ostream	&operator<<(std::ostream &out, Character &obj){

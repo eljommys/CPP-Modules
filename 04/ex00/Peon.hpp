@@ -19,9 +19,10 @@ class	Peon: public Victim{
 
 	public:
 		Peon(std::string name);
-		~Peon();
+		virtual ~Peon();
 
 		void	getPolymorphed() const;
+		Peon& operator=(const Peon& obj);
 };
 
 #endif

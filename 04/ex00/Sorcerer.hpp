@@ -24,11 +24,13 @@ class	Sorcerer{
 
 	public:
 		Sorcerer(std::string name, std::string title);
-		~Sorcerer();
+		virtual ~Sorcerer();
 
 		std::string		getName() const;
 		std::string		getTitle() const;
 		void			polymorph(Victim const &obj) const;
+
+		Sorcerer		&operator=(const Sorcerer &obj);
 };
 
 std::ostream	&operator<<(std::ostream &out, const Sorcerer& obj);
