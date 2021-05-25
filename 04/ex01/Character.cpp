@@ -42,6 +42,7 @@ void	Character::attack(Enemy *enemy){
 
 	enemy->takeDamage(this->weapon->getDamage());
 	this->ap -= (this->weapon->getName() == "Power Fist") ? 8 : 5;
+	this->ap = (this->ap < 0) ? 0 : this->ap;
 
 	if (enemy->getHP() == 0)
 		delete enemy;
