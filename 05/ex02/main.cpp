@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 17:16:46 by jserrano          #+#    #+#             */
-/*   Updated: 2021/05/27 20:26:15 by marvin           ###   ########.fr       */
+/*   Updated: 2021/05/27 20:40:28 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,12 +73,12 @@ int	main() {
 	std::cout << std::endl;
 
 	std::cout << "--- 2. CEO  and Bob try executing the forms ---" << std::endl;
-		shrub.execute(ceo);
-		robot.execute(ceo);
-		pres.execute(ceo);
-		shrub.execute(bob);
-		robot.execute(bob);
-		pres.execute(bob);
+		ceo.executeForm(shrub);
+		ceo.executeForm(robot);
+		ceo.executeForm(pres);
+		bob.executeForm(shrub);
+		bob.executeForm(robot);
+		bob.executeForm(pres);
 	std::cout << std::endl;
 
 	std::cout << "--- 3. CEO and Bob try signing the forms ---" << std::endl;
@@ -91,12 +91,12 @@ int	main() {
 	std::cout << std::endl;
 
 	std::cout << "--- 4. CEO  and Bob try executing the forms again ---" << std::endl;
-		shrub.execute(bob);
-		robot.execute(bob);
-		pres.execute(bob);
-		shrub.execute(ceo);
-		robot.execute(ceo);
-		pres.execute(ceo);
+		bob.executeForm(shrub);
+		bob.executeForm(robot);
+		bob.executeForm(pres);
+		ceo.executeForm(shrub);
+		ceo.executeForm(robot);
+		ceo.executeForm(pres);
 	std::cout << std::endl;
 
 	return (0);

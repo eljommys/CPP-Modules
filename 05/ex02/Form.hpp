@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 18:48:41 by jserrano          #+#    #+#             */
-/*   Updated: 2021/05/27 20:01:21 by marvin           ###   ########.fr       */
+/*   Updated: 2021/05/27 20:43:38 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class	Form{
 		int				getExecGrade() const;
 		bool			beSigned(Bureaucrat &obj);
 		void			virtual action(Bureaucrat const &obj) const = 0;
-		void			execute(Bureaucrat const &executor) const;
+		bool			execute(Bureaucrat const &executor) const;
 
 		class	GradeTooHighException: public std::exception{
 

@@ -49,7 +49,7 @@ bool		Form::beSigned(Bureaucrat &obj) {
 	return (false);
 }
 
-void		Form::execute(Bureaucrat const &executor) const{
+bool		Form::execute(Bureaucrat const &executor) const{
 
 	try{
 		if (!this->getSigned())
@@ -59,10 +59,11 @@ void		Form::execute(Bureaucrat const &executor) const{
 	}catch(std::exception &e){
 
 		std::cout << e.what() << std::endl;
-		return ;
+		return false;
 	}
 
 	this->action(executor);
+	return true;
 }
 
 

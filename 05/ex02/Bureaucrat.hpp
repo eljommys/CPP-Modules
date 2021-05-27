@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 16:15:51 by jserrano          #+#    #+#             */
-/*   Updated: 2021/05/27 15:34:08 by marvin           ###   ########.fr       */
+/*   Updated: 2021/05/27 20:42:02 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ class	Bureaucrat{
 		void				increment();
 		void				decrement();
 		void				signForm(Form &obj);
+		void				executeForm(Form &obj);
 
 		class	GradeTooHighException: public std::exception{
 
