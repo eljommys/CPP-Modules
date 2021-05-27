@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jserrano <jserrano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 16:15:51 by jserrano          #+#    #+#             */
-/*   Updated: 2021/02/17 18:14:50 by jserrano         ###   ########.fr       */
+/*   Updated: 2021/05/27 14:38:04 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,32 +15,33 @@
 
 #include <iostream>
 
-class   Bureaucrat{
+class	Bureaucrat{
 
-    private:
-        std::string const   name;
-        int                 grade;
+	private:
+		std::string const	name;
+		int					grade;
 
-    public:
-        Bureaucrat(std::string const &name, int grade);
+	public:
+		Bureaucrat(std::string const &name, int grade);
+		virtual ~Bureaucrat(){};
 
-        std::string         const &getName() const;
-        int                 getGrade() const;
-        void                increment();
-        void                decrement();
+		std::string			const &getName() const;
+		int					getGrade() const;
+		void				increment();
+		void				decrement();
 
-        class   GradeTooHighException: public std::exception{
+		class	GradeTooHighException: public std::exception{
 
-            public:
-                const char *what() const throw();
-        };
-        class   GradeTooLowException: public std::exception{
+			public:
+				const char *what() const throw();
+		};
+		class	GradeTooLowException: public std::exception{
 
-            public:
-                const char *what() const throw();
-        };
+			public:
+				const char *what() const throw();
+		};
 };
 
-std::ostream    const &operator<<(std::ostream &out, Bureaucrat const &obj);
+std::ostream	const &operator<<(std::ostream &out, Bureaucrat const &obj);
 
 #endif

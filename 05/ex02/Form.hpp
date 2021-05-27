@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 18:48:41 by jserrano          #+#    #+#             */
-/*   Updated: 2021/05/27 15:40:04 by marvin           ###   ########.fr       */
+/*   Updated: 2021/05/27 20:01:21 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,13 @@ class	Form{
 		Form(std::string name, int sign_in_grade, int exec_grade);
 		virtual ~Form(){};
 
-		std::string		getName();
-		bool			getSigned();
-		int				getSignGrade();
-		int				getExecGrade();
+		std::string		getName() const;
+		bool			getSigned() const;
+		int				getSignGrade() const;
+		int				getExecGrade() const;
 		bool			beSigned(Bureaucrat &obj);
+		void			virtual action(Bureaucrat const &obj) const = 0;
+		void			execute(Bureaucrat const &executor) const;
 
 		class	GradeTooHighException: public std::exception{
 
@@ -41,6 +43,11 @@ class	Form{
 				const char *what() const throw();
 		};
 		class	GradeTooLowException: public std::exception{
+
+			public:
+				const char *what() const throw();
+		};
+		class	NotSignedException: public std::exception{
 
 			public:
 				const char *what() const throw();
