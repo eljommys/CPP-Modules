@@ -31,7 +31,6 @@ class	LiteralValue{
 
 	public:
 		LiteralValue(std::string str);
-		virtual ~LiteralValue(){};
 
 		std::string		getC();
 		std::string		getI();
