@@ -1,0 +1,17 @@
+SRCS = main.cpp
+
+CC = clang++
+
+CFLAGS = -Wall -Werror -Wextra
+
+NAME = data
+
+all:
+	$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
+
+clean:
+	rm -ft *.o
+
+fclean: clean
+
+.PHONY: clean flclean $(NAME)
