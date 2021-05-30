@@ -10,7 +10,7 @@ all:
 	$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
 
 clean:
-	rm -ft *.o
+	rm -rf $(NAME)
 
 fclean: clean
 

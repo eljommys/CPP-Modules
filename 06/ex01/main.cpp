@@ -21,7 +21,7 @@ typedef struct Data{
 
 void	*serialize(void){
 
-	char raw[12];
+	char *raw = new char[12];
 	int num;
 	char *ptr;
 
@@ -42,9 +42,8 @@ Data	*deserialize(void *raw){
 
 	Data	*data = new Data;
 	char	*n_raw = reinterpret_cast<char *>(raw);
-	char	str1[4];
-	char	str2[4];
-	int		num;
+	char	str1[5];
+	char	str2[5];
 	char	s_num[4];
 
 	for(int i = 0; i < 4; i++){
@@ -52,12 +51,12 @@ Data	*deserialize(void *raw){
 		s_num[i] = n_raw[i + 4];
 		str2[i] = n_raw[i + 8];
 	}
-
-	num = reinterpret_cast<int>(s_num);
+	str1[4] = 0;
+	str2[4] = 0;
 
 	data->str1 = str1;
 	data->str2 = str2;
-	data->i = num;
+	data->i = (int)*s_num;
 
 	return data;
 }
@@ -67,7 +66,7 @@ int main()
 {
 	void *data = serialize();
 	char *raw = reinterpret_cast<char *>(data);
-	int num = reinterpret_cast<int>(raw + 4);
+	int num = (int)raw[4];
 	Data *result = deserialize(data);
 
 	std::cout << result->str1 << std::endl;
