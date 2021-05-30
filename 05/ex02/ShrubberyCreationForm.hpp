@@ -23,7 +23,6 @@ class	ShrubberyCreationForm: public Form{
 
 	public:
 		ShrubberyCreationForm(std::string name);
-		virtual ~ShrubberyCreationForm(){}
 
 		void	action(Bureaucrat const &obj) const;
 };

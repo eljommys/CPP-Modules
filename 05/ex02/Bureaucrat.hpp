@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 16:15:51 by jserrano          #+#    #+#             */
-/*   Updated: 2021/05/27 20:42:02 by marvin           ###   ########.fr       */
+/*   Updated: 2021/05/30 16:13:59 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ class	Bureaucrat{
 		int					grade;
 
 	public:
+		Bureaucrat();
+		Bureaucrat(Bureaucrat &obj);
 		Bureaucrat(std::string const &name, int grade);
-		virtual ~Bureaucrat(){};
+		virtual ~Bureaucrat();
 
-		std::string			const &getName() const;
+		std::string			getName() const;
 		int					getGrade() const;
 		void				increment();
 		void				decrement();
@@ -45,6 +47,8 @@ class	Bureaucrat{
 			public:
 				const char *what() const throw();
 		};
+
+		Bureaucrat	&operator=(Bureaucrat const &obj);
 };
 
 std::ostream	const &operator<<(std::ostream &out, Bureaucrat const &obj);

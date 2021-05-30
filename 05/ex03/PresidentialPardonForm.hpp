@@ -19,7 +19,6 @@ class	PresidentialPardonForm: public Form{
 
 	public:
 		PresidentialPardonForm(std::string name);
-		virtual ~PresidentialPardonForm(){}
 
 		void	action(Bureaucrat const &obj) const;
 };

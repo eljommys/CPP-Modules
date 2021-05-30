@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 18:48:41 by jserrano          #+#    #+#             */
-/*   Updated: 2021/05/27 20:43:38 by marvin           ###   ########.fr       */
+/*   Updated: 2021/05/30 16:19:50 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ class	Form{
 		int			const	exec_grade;
 
 	public:
+		Form();
+		Form(Form &obj);
 		Form(std::string name, int sign_in_grade, int exec_grade);
-		virtual ~Form(){};
+		virtual ~Form();
 
 		std::string		getName() const;
 		bool			getSigned() const;
@@ -52,6 +54,8 @@ class	Form{
 			public:
 				const char *what() const throw();
 		};
+
+		Form	&operator=(Form	const &obj);
 };
 
 std::ostream		&operator<<(std::ostream &out, Form &obj);

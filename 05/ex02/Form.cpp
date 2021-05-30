@@ -12,6 +12,10 @@
 
 #include "Form.hpp"
 
+Form::Form():name("noname"), sign(false), sign_grade(1), exec_grade(1){}
+
+Form::Form(Form &obj): name(obj.getName()), sign(obj.getSigned()), sign_grade(obj.getSignGrade()), exec_grade(obj.getExecGrade()){}
+
 Form::Form(std::string name, int sign_in_grade, int exec_grade):
 	name(name),
 	sign(false),
@@ -28,6 +32,9 @@ Form::Form(std::string name, int sign_in_grade, int exec_grade):
 		std::cout << e.what() << std::endl;
 	}
 }
+
+Form::~Form(){}
+
 
 std::string		Form::getName() const{
 	return this->name;
@@ -82,6 +89,11 @@ const char *Form::NotSignedException::what() const throw(){
 	return "Form not signed";
 }
 
+Form	&Form::operator=(Form	const &obj){
+
+	this->sign = obj.getSigned();
+	return *this;
+}
 
 std::ostream		&operator<<(std::ostream &out, Form &obj){
 

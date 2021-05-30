@@ -19,7 +19,6 @@ class	RobotomyRequestForm: public Form{
 
 	public:
 		RobotomyRequestForm(std::string name);
-		virtual ~RobotomyRequestForm(){}
 
 		void	action(Bureaucrat const &obj) const;
 };
