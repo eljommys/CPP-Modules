@@ -16,10 +16,8 @@
 #include <stack>
 #include <iterator>
 
-class	MutantStack: public std::stack{
-
-	private:
-		std::iterator iter;
+template <typename T>
+class	MutantStack: public std::stack<T>{
 
 	public:
 		class	iterator{
