@@ -13,6 +13,7 @@
 #ifndef MUTANTSTACK_HPP
 # define MUTANTSTACK_HPP
 
+#include <iostream>
 #include <stack>
 #include <iterator>
 
@@ -20,9 +21,20 @@ template <typename T>
 class	MutantStack: public std::stack<T>{
 
 	public:
-		class	iterator{
+		MutantStack(): std::stack<T>() {}
+		MutantStack(MutantStack &obj):std::stack<T>(){
+			*this = obj;
+		}
 
-		};
-}
+		typedef typename std::deque<T>::iterator iterator;
+
+		iterator	end(){
+			return this->c.end();
+		}
+
+		iterator	begin(){
+			return this->c.begin();
+		}
+};
 
 #endif
